@@ -1,0 +1,7 @@
+The address of X is
+I do not understand
+Do you speak english?
+OK, what is your query?
+I found X answers
+What is your choice?
+Hello

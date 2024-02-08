@@ -1,0 +1,7 @@
+L'adresse de X est
+Je ne comprends pas votre demande
+Parlez-vous français?
+D'accord, quelle est votre demande?
+J'ai X réponses possibles
+Quel est votre choix?
+Bonjour

@@ -1,0 +1,5 @@
+bonjour,salut,bonsoir,recherche,cherche,ou,est,donc,trouve,trouver,français;0
+hi,hello,morning,evening,afternoon,hey,seek,seeking,search,searching,look,looking,where,find,english;1
+hola,buenos,dias,donde,esta,busco,buscando,español;2
+hallo,guten,morgen,tag,abend,wo,ist,suche,suchen,deutsch;3
+buongiorno,ciao,salve,buon,pomeriggio,buonasera,incantato,dove,trova,cerco,cercando,italiano,pepperoni;4

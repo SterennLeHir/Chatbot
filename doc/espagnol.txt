@@ -1,0 +1,7 @@
+La dirección de X es
+No comprendo
+Hablas español?
+Está bien, cuál es tu petición?
+Tengo X opciones
+Cuál es su elección?
+Hola

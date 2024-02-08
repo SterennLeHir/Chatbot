@@ -1,0 +1,31 @@
+@startuml
+
+package gui {
+	class ReactiveApp {
+		top() : MainFrame
+	}
+	class UI {
+		printToChat(s:String) : Unit
+		scrollToBottom() : Unit
+    Voice(voiceName: String) : Unit
+    say(input: String) : Unit
+	}
+	interface User {
+		name : String
+		alignment : BorderPanel.Position.Value
+	}
+	class User_object {
+		name = "Utilisateur"
+ 		alignment = BorderPanel.Position.East
+	}
+	class Bot_object {
+		name = "Billy_Bot_DQ"
+		alignment = BorderPanel.Position.West
+	}
+}
+
+ReactiveApp -- UI
+ User_object --|> User
+ Bot_object --|> User
+
+@enduml

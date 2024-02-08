@@ -1,0 +1,86 @@
+/* Pour afficher le diagramme UML:  
+   Window>Show view>Other>Plantuml
+   
+   La doc: http://plantuml.com/class-diagram
+*/
+
+@startuml
+
+class App_object {
+	
+}
+
+class GUI {
+	détail : UI.uml
+}
+
+package machine {
+	interface MachineDialogue {
+		ask(s:String) : List[string]
+		reinit() : Unit
+		test(l:List[String]) : List[String]
+	}
+	class MachineImpl {
+		ask(s:String) : List[String]
+		reinit() : Unit
+		test(l:List[String]) : List[String]
+	}
+	interface Analyse_Phrase_Trait{
+		 nextLanguage(): Unit
+    languageDetection(keywords: List[String], bdd: Map[String, Int]): Unit
+    languageConfirmation(keywords: List[String], bdd: Map[Int, String]): Unit
+    verifyLanguage(): Boolean
+		decoupePhrase(s:String) : List[String]
+    chercheNombre(s:List[String]): Option[Int]
+		filtrageBonjour(l:List[String],s:String) : Boolean
+	}
+	class Analyse_Phrase_Impl {
+    nextLanguage(): Unit
+    languageDetection(keywords: List[String], bdd: Map[String, Int]): Unit
+    languageConfirmation(keywords: List[String], bdd: Map[Int, String]): Unit
+    verifyLanguage(): Boolean
+		decoupePhrase(s:String) : List[String]
+    chercheNombre(s:List[String]): Option[Int]
+		filtrageBonjour(l:List[String],s:String) : Boolean
+	}
+	interface ErrorsTolerance{
+		levenshteinDist(s1:String,s2:String):Int
+    corrige(l:List[String],b:List[String]) : List[String]
+	}
+	class ErrorsToleranceImpl {
+		stripAccents(s:String): String
+		corrige(l:List[String], b:List[String]):List[String]
+		levenshteinDist(s1:String,s2:String) : Int
+	}
+	interface BaseDeDonnees{
+		initialiser() : Unit
+	  reponse(motsCles: List[String]): (Boolean, Boolean, List[String], Option[String])
+		chercheAdresse(motsCles: List[String]): (Option[String], List[String])
+		listeLieux() : List[String]
+		existe(lieu:String) : Boolean
+	}
+	class BaseDeDonneesImpl{
+		initialiser(): Unit
+    dataBaseToUse(language:Int): Array[String]
+    private motStandardise(mot: String): String
+		reponse(motsCles: List[String]): (Boolean, Boolean, List[String], Option[String])
+		trouverMaj(adresseStandardisee: String): String
+    chercheAdresse(motsCles: List[String]): (Option[String], List[String])
+    existeMot(mot: String, BDDPhrase: Boolean): Boolean
+		listeLieux: List[String]
+		existe(lieu: String) : Boolean
+	}
+}
+
+ GUI -- MachineDialogue
+ App_object -- MachineDialogue
+ MachineDialogue  -- Analyse_Phrase_Trait
+ Analyse_Phrase_Trait -- ErrorsTolerance
+ MachineDialogue -- BaseDeDonnees
+ 
+ MachineImpl --|> MachineDialogue
+ Analyse_Phrase_Impl --|> Analyse_Phrase_Trait
+ ErrorsToleranceImpl --|> ErrorsTolerance
+ BaseDeDonneesImpl --|> BaseDeDonnees
+ 
+ @enduml

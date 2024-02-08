@@ -1,0 +1,25 @@
+Bonjour;Bonjour
+Salut;Bonjour
+Bonsoir;Bonjour
+hi;Bonjour
+hello;Bonjour
+morning;Bonjour
+evening;Bonjour
+afternoon;Bonjour
+hey;Bonjour
+hola;Bonjour
+buenos;Bonjour
+dias;Bonjour
+hallo;Bonjour
+guten;Bonjour
+morgen;Bonjour
+tag;Bonjour
+abend;Bonjour
+buongiorno;Bonjour
+ciao;Bonjour
+salve;Bonjour
+buon;Bonjour
+pomeriggio;Bonjour
+buonasera;Bonjour
+incantato;Bonjour
+*;Je ne comprends pas votre demande
